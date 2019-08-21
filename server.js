@@ -16,7 +16,7 @@ server.use('/api/positions', PositionsRouter)
 server.use('/api/departments', DepartmentsRouter)
 
 server.get('/', (req, res) => {
-  res.json({ api: 'up', session: req.session })
+  res.json({ api: 'up'})
 });
 
 module.exports = server;
