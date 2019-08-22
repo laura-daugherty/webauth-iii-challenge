@@ -11,6 +11,8 @@ function getUsers() {
   return db('users as u')
   .innerJoin("departments as d", "d.id", "=", "u.department_id")
   .innerJoin("positions as p", "p.id", "=", "u.position_id")
+  // .groupBy('u.department_id')
+  // .having('u.department_id', "=", "u.position_id")
   .select('d.department_name', 'p.position_name', 'u.username');
 }
 
